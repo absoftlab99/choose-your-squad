@@ -8,10 +8,12 @@ document.getElementById('calculate').addEventListener('click', function(){
 })
 
 document.getElementById('calculate-total').addEventListener('click', function(){
-    const player = fieldValue('player-price') * listLenght();
+    const playerExpenceText = document.getElementById('player-expence');
+    const playerExpenceString = playerExpenceText.innerText;
+    const playerExpence = parseFloat(playerExpenceString);
     const manager = fieldValue('manager');
     const coach = fieldValue('coach');
-    const total = player + manager + coach;
+    const total = playerExpence + manager + coach;
     const totalText = document.getElementById('total');
     totalText.innerText = total;
 })
