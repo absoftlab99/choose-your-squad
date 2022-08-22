@@ -3,16 +3,22 @@ function getPlayerName(player){
         const ol = document.querySelector('#list');
         const li = document.createElement('li');
         li.innerText = listItem;
-        ol.appendChild(li);
-
+        ol.appendChild(li);  
 }
 function setPlayer(btn, player){
-    getPlayerName(player);
-    const button = document.getElementById(btn);
-    button.disabled = true;
-    const btns = document.getElementById(btn);
-    btns.innerText = 'SELECTED';
-    btns.classList = 'btn btn-disabled text-light w-100 rounded-0';
+    const players = document.querySelectorAll('li');
+    const playersNumber = players.length;
+    if(playersNumber < 5){
+        getPlayerName(player);
+        const button = document.getElementById(btn);
+        button.disabled = true;
+        const btns = document.getElementById(btn);
+        btns.innerText = 'SELECTED';
+        btns.classList = 'btn btn-disabled text-light w-100 rounded-0';
+    }
+    else{
+        alert('You have already selected 5 cricketers.');
+    }
 }
 
     document.getElementById('btn1').addEventListener('click', function(){
