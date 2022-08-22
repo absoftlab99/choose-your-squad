@@ -13,7 +13,7 @@ function setPlayer(btn, player){
         const button = document.getElementById(btn);
         button.disabled = true;
         const btns = document.getElementById(btn);
-        btns.innerText = 'SELECTED';
+        btns.innerText = '✔️ SELECTED';
         btns.classList = 'btn btn-disabled text-light w-100 rounded-0';
     }
     else{
