@@ -21,26 +21,27 @@ document.getElementById('calculate-total').addEventListener('click', function(){
     const playerExpenceString = playerExpenceText.innerText;
     const playerExpence = parseFloat(playerExpenceString);
     const manager = fieldValue('manager');
-    if(isNaN(manager) === false){
-        return manager;
-    }
-    else{
-        alert('Please input valid manager price');
-        const manager = document.getElementById('manager');
-        manager.value = '';
-    }
     const coach = fieldValue('coach');
-    if(isNaN(coach) === false){
-        return coach;
-    }
-    else{
-        alert('Please input valid coach price');
-        const coach = document.getElementById('coach');
-        coach.value = '';
-    }
     const total = playerExpence + manager + coach;
     const totalText = document.getElementById('total');
     totalText.innerText = total;
+
+        if(isNaN(manager) === false){
+            return manager;
+        }
+        else{
+            alert('Please input valid manager price');
+            const manager = document.getElementById('manager');
+            manager.value = '';
+        }
+        if(isNaN(coach) === false){
+            return coach;
+        }
+        else{
+            alert('Please input valid coach price');
+            const coach = document.getElementById('coach');
+            coach.value = '';
+        }
 })
 
 function listLenght(){
